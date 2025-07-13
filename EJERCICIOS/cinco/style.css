@@ -1,0 +1,78 @@
+/* Se agrega: Variables CSS personalizadas para la galería de imágenes */
+:root {
+    --gallery-width: 63.5vw;             /* Se agrega: Ancho de la galería (63.5% del viewport) */
+    --item-width: 20vw;                  /* Se agrega: Ancho de cada elemento de la galería */
+    --item-height: 70vh;                 /* Se agrega: Altura de cada elemento de la galería */
+    --img-width: 18vw;                   /* Se agrega: Ancho de las imágenes (menor que el contenedor) */
+    --img-height: 50vh;                  /* Se agrega: Altura de las imágenes (70% del viewport) */
+    --border-radius: 15px;               /* Se agrega: Radio de bordes redondeados para elementos */
+    --margin-left: 10px;                 /* Se agrega: Margen izquierdo para separación entre elementos */
+    --margin-top-small: 15px;            /* Se agrega: Margen superior pequeño para ajustes finos */
+    --margin-top-medium: 20px;           /* Se agrega: Margen superior mediano para separación estándar */
+    --margin-top-large: 25px;            /* Se agrega: Margen superior grande para espaciado principal */
+    --border-width: 5px;                 /* Se agrega: Grosor del borde del contenedor */
+    --gallery-height: 190vh;             /* Se agrega: Altura total de la galería (1.9 veces el viewport) */
+    --container-height: 150vh;           /* Se agrega: Altura del contenedor interno de la galería */
+}
+
+/* Se agrega: Reset universal para establecer base común en todos los elementos */
+* {
+    box-sizing: content-box;             /* Se agrega: Calcula tamaño sin incluir padding ni border */
+    margin: 0;                           /* Se agrega: Elimina márgenes por defecto del navegador */
+    padding: 0;                          /* Se agrega: Elimina relleno por defecto del navegador */
+}
+
+/* Se agrega: Fondo general de la página con tema oscuro */
+body {
+    background-color: black;             /* Se agrega: Fondo negro para toda la página */
+}
+
+/* Se agrega: Contenedor principal de la galería */
+.gallery {
+    width: var(--gallery-width);         /* Se agrega: Ancho responsive (63.5% del viewport) */
+    margin: 0 auto;                      /* Se agrega: Centra horizontalmente la galería */
+    height: var(--gallery-height);       /* Se agrega: Altura muy grande para contenido extenso */
+}
+
+/* Se agrega: Estilo del título principal de la galería */
+h1 {
+    text-align: center;                  /* Se agrega: Centra el texto del título */
+    color: white;                        /* Se agrega: Color blanco para contraste con fondo negro */
+}
+
+/* Se agrega: Contenedor interno que aloja los elementos de la galería */
+.gallery__container {
+    border: var(--border-width) solid rgb(224, 224, 224); /* Se agrega: Borde gris claro de 5px */
+    width: var(--gallery-width);         /* Se agrega: Mismo ancho que el contenedor padre */
+    margin-top: var(--margin-top-medium); /* Se agrega: Separación desde el título */
+    height: var(--container-height);     /* Se agrega: Altura grande para múltiples elementos */
+}
+
+/* Se agrega: Estilo general para todas las imágenes */
+img {
+    width: var(--img-width);             /* Se agrega: Ancho responsive (18% del viewport) */
+    height: var(--img-height);           /* Se agrega: Altura responsive (50% del viewport) */
+    margin: var(--margin-top-large) 0 var(--margin-top-small) 0; /* Se agrega: Márgenes superior e inferior diferentes */
+    border-radius: var(--border-radius); /* Se agrega: Esquinas redondeadas para las imágenes */
+}
+
+/* Se agrega: Estilo base para cada elemento individual de la galería */
+.gallery__item {
+    display: inline-block;               /* Se agrega: Permite que los elementos se coloquen en línea */
+    width: var(--item-width);            /* Se agrega: Ancho responsive (20% del viewport) */
+    height: var(--item-height);          /* Se agrega: Altura responsive (70% del viewport) */
+    background-color: rgb(77, 92, 92);   /* Se agrega: Fondo gris verdoso para cada elemento */
+    text-align: center;                  /* Se agrega: Centra el contenido dentro del elemento */
+    margin-left: var(--margin-left);     /* Se agrega: Separación izquierda entre elementos */
+    border-radius: var(--border-radius); /* Se agrega: Esquinas redondeadas para cada elemento */
+}
+
+/* Se agrega: Margen especial para el primer elemento de la galería */
+.gallery__item--1 {
+    margin-top: var(--margin-top-medium); /* Se agrega: Separación superior para el primer elemento */
+}
+
+/* Se agrega: Margen especial para el cuarto elemento de la galería */
+.gallery__item--4 {
+    margin-top: var(--margin-top-small); /* Se agrega: Separación superior menor para el cuarto elemento */
+}

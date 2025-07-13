@@ -1,0 +1,54 @@
+/* Se agrega: Variables CSS personalizadas para la lista semanal */
+:root {
+    --margin-top-small: 10px;            /* Se agrega: Margen superior pequeño para elementos de lista */
+    --margin-top-medium: 20px;           /* Se agrega: Margen superior mediano para separación estándar */
+    --margin-top-large: 25px;            /* Se agrega: Margen superior grande para contenedor interno */
+    --border-width: 3px;                 /* Se agrega: Grosor del borde para el contenedor principal */
+    --width-percentage-large: 70%;       /* Se agrega: Ancho porcentual grande para contenedor interno */
+    --width-percentage-medium: 50%;      /* Se agrega: Ancho porcentual mediano para contenedor principal */
+}
+
+/* Se agrega: Reset universal para establecer base común en todos los elementos */
+* {
+    box-sizing: content-box;             /* Se agrega: Calcula tamaño sin incluir padding ni border */
+    margin: 0;                           /* Se agrega: Elimina márgenes por defecto del navegador */
+    padding: 0;                          /* Se agrega: Elimina relleno por defecto del navegador */
+}
+
+/* Se agrega: Fondo general de la página con color llamativo */
+body {
+    background-color: blueviolet;        /* Se agrega: Fondo violeta azulado para toda la página */
+}
+
+/* Se agrega: Contenedor principal de la lista semanal */
+.weekly-list {
+    width: var(--width-percentage-medium); /* Se agrega: Ancho del 50% del viewport (responsive) */
+    margin: 0 auto;                      /* Se agrega: Centra horizontalmente el contenedor */
+    border: var(--border-width) solid rgb(0, 0, 0); /* Se agrega: Borde negro sólido de 3px */
+    background-color: rgb(247, 0, 255);  /* Se agrega: Fondo rosa/magenta brillante */
+    margin-top: var(--margin-top-medium); /* Se agrega: Separación desde la parte superior */
+}
+
+/* Se agrega: Estilo del título principal de la lista */
+h1 {
+    text-align: center;                  /* Se agrega: Centra el texto del título */
+    color: blue;                         /* Se agrega: Color azul para el título */
+}
+
+/* Se agrega: Contenedor interno que aloja los elementos de la lista */
+.weekly-list__container {
+    width: var(--width-percentage-large); /* Se agrega: Ancho del 70% del contenedor padre */
+    margin: 0 auto;                      /* Se agrega: Centra horizontalmente el contenedor interno */
+    margin-top: var(--margin-top-large); /* Se agrega: Separación superior desde el título */
+    margin-bottom: var(--margin-top-medium); /* Se agrega: Separación inferior del contenedor */
+}
+
+/* Se agrega: Elimina los puntos/viñetas por defecto de las listas */
+ul {
+    list-style: none;                    /* Se agrega: Quita los marcadores de lista predeterminados */
+}
+
+/* Se agrega: Espaciado vertical entre elementos de la lista */
+li {
+    margin-top: var(--margin-top-small); /* Se agrega: Separación pequeña entre cada elemento */
+}

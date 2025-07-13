@@ -1,0 +1,123 @@
+:root {
+    --background-color: black;
+    --text-color: white;
+    --valid-color: #0ece0e;
+    --invalid-color: #d82e2e;
+    --email-background: #1512bd;
+    --focus-border-color: rgb(255, 0, 157);
+    --error-color: #e71b1b;
+    --button-background: red;
+    --button-text-color: rgb(255, 255, 255);
+    --border-width: 0.1vh;
+    --border-radius-small: 2vh;
+    --border-radius-large: 3vh;
+    --spacing-small: 1vh;
+    --spacing-medium: 5vh;
+    --spacing-large: 13vh;
+    --font-size-small: 0.8vh;
+    --font-size-medium: 1vh;
+    --content-width: 125vh;
+    --content-margin-left: 40vh;
+    --content-margin-top: 20vh;
+    --card-width: 18vh;
+    --card-height: 7vh;
+    --button-width: 9vh;
+    --button-height: 3vh;
+    --icon-size: 3vh;
+    --icon-margin-left: 39vh;
+    --icon-margin-top: 2.5vh;
+    --icon-margin-right: 1vh;
+}
+
+* {
+    background-color: var(--background-color);
+    font-family: "Press Start 2P", system-ui;
+}
+
+.form__container {
+    width: var(--content-width);
+    margin-left: var(--content-margin-left);
+    margin-top: var(--content-margin-top);
+}
+
+.form__title, .form__label--document, .form__label--email, .form__card {
+    color: var(--text-color);
+}
+
+.form__title {
+    margin-bottom: var(--spacing-large);
+}
+
+input:valid {
+    color: var(--valid-color);
+}
+
+input:invalid {
+    color: var(--invalid-color);
+}
+
+.form__input--email[type="email"] {
+    background-color: var(--email-background);
+}
+
+input:focus {
+    border-radius: var(--border-radius-small);
+    border: solid var(--focus-border-color);
+}
+
+.form__input--document::before {
+    content: '';
+    position: absolute;
+    top: var(--icon-margin-top);
+    margin-right: var(--icon-margin-right);
+    background-image: url(imagenes/pika.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    pointer-events: none;
+    z-index: 1;
+    margin-left: var(--icon-margin-left);
+}
+
+.form__field--document {
+    position: relative;
+}
+
+.form__card {
+    text-align: center;
+    font-size: var(--font-size-medium);
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    border: var(--border-width) solid var(--error-color);
+    padding: var(--spacing-small);
+    top: var(--spacing-medium);
+    margin-bottom: 6vh;
+    border-radius: var(--border-radius-large);
+}
+
+.form__button--delete {
+    font-size: var(--font-size-small);
+    width: var(--button-width);
+    height: var(--button-height);
+    position: absolute;
+    top: var(--spacing-medium);
+    left: 5.5vh;
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--border-radius-small);
+}
+
+.form__field:first-child {
+    color: var(--error-color);
+}
+
+.form__field--document {
+    margin-top: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+}

@@ -1,0 +1,98 @@
+/* Se agregan variables CSS en :root para valores que se repiten */
+:root {
+    --spacing-small: 5px;
+    --spacing-medium: 10px;
+    --spacing-large: 20px;
+    --border-radius-small: 10px;
+    --border-radius-medium: 15px;
+    --image-size: 150px;
+    --margin-auto: 0 auto;
+}
+
+/* Se agrega reset básico para todos los elementos */
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Se agrega contenedor principal de películas */
+.movies {
+    background-color: rgb(166, 168, 168);
+    width: 80vw;
+    margin: var(--margin-auto);
+    border-radius: var(--border-radius-medium);
+    border: 3px solid black;
+    margin-top: var(--spacing-large);
+}
+
+/* Se agrega estilo para el título principal */
+.movies__title {
+    margin-top: var(--spacing-medium);
+    color: white;
+    text-align: center;
+}
+
+/* Se agrega contenedor de categorías */
+.movies__categories {
+    display: block;
+    width: 60vw;
+    margin: var(--margin-auto);
+    margin-top: var(--spacing-large);
+}
+
+/* Se agrega estilo para el título de categorías */
+.movies__categories-title {
+    color: rgb(51, 50, 50);
+}
+
+/* Se agrega estilo para ocultar los inputs radio */
+.movies__input {
+    display: none;
+}
+
+/* Se agrega estilo para los botones de categorías */
+.movies__button {
+    display: inline-block;
+    padding: var(--spacing-medium);
+    cursor: pointer;
+    margin-right: 28px;
+    background-color: #008cff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: var(--border-radius-small);
+    margin-top: var(--spacing-medium);
+}
+
+/* Se agrega estilo para el botón activo de terror */
+.movies__input#terror:checked ~ .movies__buttons .movies__button[for="terror"],
+.movies__input#comedia:checked ~ .movies__buttons .movies__button[for="comedia"],
+.movies__input#accion:checked ~ .movies__buttons .movies__button[for="accion"],
+.movies__input#romance:checked ~ .movies__buttons .movies__button[for="romance"] {
+    background-color: #04355c;
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-small);
+}
+
+/* Se agrega estilo para el contenido de películas */
+.movies__content {
+    display: none;
+    margin-top: var(--spacing-medium);
+}
+
+/* Se agrega estilo para mostrar el contenido activo */
+.movies__input#terror:checked ~ #contenido-terror,
+.movies__input#comedia:checked ~ #contenido-comedia,
+.movies__input#accion:checked ~ #contenido-accion,
+.movies__input#romance:checked ~ #contenido-romance {
+    display: block;
+}
+
+/* Se agrega estilo para las imágenes de películas */
+.movies__image {
+    width: var(--image-size);
+    height: var(--image-size);
+    margin: var(--spacing-small) var(--spacing-large) var(--spacing-small) 0;
+    border-radius: var(--border-radius-small);
+}

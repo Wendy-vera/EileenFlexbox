@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulario.css">
+    <link rel="stylesheet" href="c.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form__container">
+        
+        <h1 class="form__title">
+            FORMULARIO DE INSCRIPCION
+        </h1>
+        <div>
+            <div class="form__field">
+                <label for="nombre" class="form__label--name">Ingrese su nombre</label>
+                <input type="text" id="nombre" class="form__input--name" required /> 
+            </div>
+            <div class="form__field--document">
+                <label for="numero" class="form__label--document">Ingrese su numero de documento</label>
+                <div class="form__input--document">
+                    <input type="number" id="numero" class="form__input--document-number" required />
+                </div>
+            </div>
+             
+            <div class="form__field--email">
+                <label for="email_input" class="form__label--email">Introduzca su correo electrónico:</label>
+                <input type="email" id="email_input" class="form__input--email" required />
+            </div>
+            
+        </div>
+        <div class="form__card">
+            deseas eliminar los datos:
+            <button class="form__button--delete">Eliminar</button>
+        </div>
+        <a href="c.html" class="form__link--home"> volver al inicio</a>
+
+    </div>
+</body>
+</html>

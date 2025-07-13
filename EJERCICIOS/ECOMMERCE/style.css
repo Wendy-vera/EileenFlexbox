@@ -1,0 +1,542 @@
+/* Se agrega: Variables CSS para reutilizar valores comunes en todo el proyecto */
+:root {
+  --border-radius-small: 5px;
+  --border-radius-medium: 10px;
+  --border-radius-large: 15px;
+  --border-radius-xl: 20px;
+  --padding-small: 10px;
+  --padding-medium: 15px;
+  --padding-large: 20px;
+  --margin-small: 10px;
+  --margin-medium: 15px;
+  --margin-large: 20px;
+  --margin-xl: 50px;
+  --margin-xxl: 190px;
+  --width-nav: 90%;
+  --width-content: 90%;
+  --width-about-vision: 80vw;
+  --border-image: 2px solid rgba(0, 0, 0, 0.438);
+  --box-shadow-image: 2px 2px 10px 6px rgba(0,0,0,0.5);
+  --z-index-fixed: 2;
+  --z-index-overlay: 1;
+}
+
+/* Se agrega: Reset global para eliminar márgenes y padding por defecto */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Se agrega: Estilos base del cuerpo de la página */
+body {
+  background-color: #FFF8ED;
+  color: #4E342E;
+  font-family: 'Trebuchet MS', sans-serif;
+  height: 150vh;
+}
+
+/* Se agrega: Encabezado fijo con título principal de la pastelería */
+.header {
+  width: 100vw;
+  text-align: center;
+  font-family: 'Mystery Quest', cursive;
+  color: #FFBD59;
+  font-size: 2em;
+  padding-top: var(--padding-large);
+  background-color: #FFF8ED;
+  position: fixed;
+  top: 0;
+  height: 20vh;
+  z-index: var(--z-index-fixed);
+}
+
+/* Se agrega: Barra de navegación fija con logo y botones */
+.nav {
+  background-color: #C27C21;
+  width: var(--width-nav);
+  height: 7.5vh;
+  margin: auto;
+  padding: var(--padding-small);
+  border-radius: var(--border-radius-medium);
+  text-align: right;
+  position: fixed;
+  top: 17vh;
+  left: 5vw;
+  z-index: var(--z-index-fixed);
+}
+
+/* Se agrega: Logo de la empresa posicionado a la izquierda */
+.nav__logo {
+  float: left;
+  width: 40px;
+  height: 40px;
+}
+
+/* Se agrega: Estilo base para todos los botones de navegación */
+.nav__button {
+  margin: 2px var(--margin-medium);
+  padding: 6px 12px;
+  background-color: #E84A5F;
+  border: none;
+  border-radius: var(--border-radius-small);
+  color: white;
+  cursor: pointer;
+}
+
+/* Se agrega: Botón de búsqueda extendido con estilo especial */
+.nav__button--search {
+  float: left;
+  margin-left: var(--margin-small);
+  width: 30vw;
+  background-color: #fa8c9bbd;
+}
+
+/* Se agrega: Contenedor principal del contenido con margen superior */
+.content {
+  width: var(--width-content);
+  margin: var(--margin-xxl) auto;
+  padding: var(--padding-large) 0;
+}
+
+/* Se agrega: Sección hero principal con fondo blanco y contenido centrado */
+.hero {
+  background-color: #fff;
+  border-radius: var(--border-radius-xl);
+  padding: var(--padding-large);
+  text-align: center;
+  margin-bottom: var(--margin-xl);
+}
+
+/* Se agrega: Contenido de texto del hero posicionado a la izquierda */
+.hero__content {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+  text-align: center;
+  margin-right: var(--margin-large);
+}
+
+/* Se agrega: Título del hero con margen inferior */
+.hero__content h2 {
+  margin-bottom: var(--margin-large);
+}
+
+/* Se agrega: GIF animado del hero con bordes redondeados */
+.hero__gif {
+  width: 80%;
+  border-radius: var(--border-radius-large);
+  margin-top: var(--margin-xl);
+}
+
+/* Se agrega: Imagen principal del hero con altura fija */
+.hero__image {
+  width: 40%;
+  vertical-align: top;
+  border-radius: var(--border-radius-large);
+  height: 70vh;
+}
+
+/* Se agrega: Sección sobre nosotros con posicionamiento absoluto para imágenes */
+.about {
+  text-align: center;
+  position: relative;
+  height: 119vh;
+  width: var(--width-about-vision);
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+/* Se agrega: Sección visión con layout similar a sobre nosotros */
+.vision {
+  text-align: center;
+  position: relative;
+  height: 90vh;
+  width: var(--width-about-vision);
+  margin: 0 auto;
+  margin-bottom: var(--margin-large);
+}
+
+/* Se agrega: Texto descriptivo centrado para secciones about y vision */
+.about__text, .vision__text {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: var(--margin-large);
+  font-size: 1rem;
+}
+
+/* Se agrega: Margen superior para todas las imágenes de about y vision */
+.about__image, .vision__image {
+  margin-top: 60px;
+}
+
+/* Se agrega: Imagen izquierda de la sección about con opacidad reducida */
+.about__image--left {
+  width: 35%;
+  border-radius: var(--border-radius-medium);
+  float: left 10px;
+  opacity: 0.7;
+  border: var(--border-image);
+}
+
+/* Se agrega: Imagen izquierda de la sección vision con altura fija */
+.vision__image--left {
+  width: 35%;
+  height: 62vh;
+  border-radius: var(--border-radius-medium);
+  float: left;
+  opacity: 0.7;
+  border: var(--border-image);
+}
+
+/* Se agrega: Imagen central de about con posicionamiento absoluto y sombra */
+.about__image--center {
+  width: 31%;
+  border-radius: var(--border-radius-medium);
+  position: absolute;
+  left: 28vw;
+  top: 90px;
+  z-index: var(--z-index-overlay);
+  border: var(--border-image);
+  box-shadow: var(--box-shadow-image);
+}
+
+/* Se agrega: Imagen central de vision con posicionamiento absoluto y sombra */
+.vision__image--center {
+  width: 37%;
+  height: 70vh;
+  border-radius: var(--border-radius-medium);
+  position: absolute;
+  left: 27vw;
+  top: 34px;
+  z-index: var(--z-index-overlay);
+  border: var(--border-image);
+  box-shadow: var(--box-shadow-image);
+}
+
+/* Se agrega: Imagen derecha de about flotada a la derecha con opacidad */
+.about__image--right {
+  width: 46%;
+  border-radius: var(--border-radius-medium);
+  float: right 10px;
+  opacity: 0.7;
+  border: var(--border-image);
+}
+
+/* Se agrega: Imagen derecha de vision con ancho fijo y altura definida */
+.vision__image--right {
+  width: 350px;
+  height: 62vh;
+  border-radius: var(--border-radius-medium);
+  float: right;
+  opacity: 0.7;
+  border: var(--border-image);
+}
+
+/* Se agrega: Sección de productos con alineación centrada */
+.products {
+  text-align: center;
+}
+
+/* Se agrega: Tarjeta individual de producto con fondo amarillo */
+.product {
+  display: inline-block;
+  width: 15vw;
+  height: 50vh;
+  margin: var(--margin-medium);
+  padding: var(--padding-small);
+  background-color: #FFBD59;
+  border-radius: var(--border-radius-medium);
+  text-align: center;
+  vertical-align: top;
+}
+
+/* Se agrega: Imagen del producto con dimensiones fijas */
+.product__image {
+  width: 11vw;
+  height: 32vh;
+  border-radius: var(--border-radius-medium);
+  margin-bottom: var(--margin-small);
+}
+
+/* Se agrega: Descripción del producto alineada verticalmente */
+.product__description {
+  vertical-align: top;
+}
+
+/* Se agrega: Enlace para ver más productos con color destacado */
+.products__link {
+  margin-top: 0px;
+  color: #E84A5F;
+  cursor: pointer;
+}
+
+/* Se agrega: Sección de redes sociales con fondo café claro */
+.social {
+  background-color: #CFA26C;
+  padding: var(--padding-medium);
+  text-align: center;
+  margin-top: var(--margin-xl);
+  border-radius: var(--border-radius-medium);
+}
+
+/* Se agrega: Icono de Facebook con dimensiones específicas */
+.social__icon--facebook {
+  width: 3vw;
+  height: 5.5vh;
+}
+
+/* Se agrega: Icono de Instagram con dimensiones específicas */
+.social__icon--instagram {
+  width: 3vw;
+  height: 5.5vh;
+}
+
+/* Se agrega: Icono de TikTok con dimensiones específicas y margen */
+.social__icon--tiktok {
+  width: 3.1vw;
+  height: 5vh;
+  margin-bottom: 2px;
+}
+
+/* Se agrega: Icono de Twitter con dimensiones específicas y margen */
+.social__icon--twitter {
+  width: 2.2vw;
+  height: 4.1vh;
+  margin-bottom: 6px;
+}
+
+/* Se agrega: Media quer para pantallas menores a 1200px */
+@media (max-width: 1200px) {
+  .about {
+    height: 90vh;
+  }
+  
+  .product {
+    width: 25vw;
+    height: 49vh;
+  }
+
+  .product__image {
+    width: 70%;
+  }
+  
+  .social__icon--facebook {
+    width: 4vw;
+    height: 6.5vh;
+  }
+  
+  .social__icon--instagram {
+    width: 4vw;
+    height: 6.5vh;
+  }
+  
+  .social__icon--tiktok {
+    width: 4.1vw;
+    height: 6vh;
+    margin-bottom: 2px;
+  }
+  
+  .social__icon--twitter {
+    width: 3vw;
+    height: 5.1vh;
+    margin-bottom: 6px;
+  }
+  
+  .hero__gif {
+    height: 35vh;
+  }
+}
+
+/* Se agrega: Media querie para pantallas menores a 910px */
+@media (max-width: 910px) {
+  .header {
+    font-size: 30px;
+    padding: var(--padding-large);
+  }
+  
+  .nav__button {
+    margin: 5px var(--margin-small);
+    background-color: rgba(83, 37, 37, 0);
+  }
+
+  .about__image--center {
+    width: 40%;
+    height: 61vh;
+  }
+  
+  .about {
+    width: 90vw;
+    left: 0;
+  }
+  
+  .vision__image--center {
+    width: 30vw;
+    height: 60vh;
+  }
+  
+  .vision__image--left, .vision__image--right {
+    height: 50vh;
+  }
+
+  .product__image {
+    width: 90%;
+  }
+
+  .social__icon--facebook {
+    width: 6vw;
+  }
+  
+  .social__icon--instagram {
+    width: 6vw;
+  }
+  
+  .social__icon--tiktok {
+    width: 6.1vw;
+  }
+  
+  .social__icon--twitter {
+    width: 4.5vw;
+  }
+  
+  .hero {
+    height: 45vh;
+  }
+  
+  .hero__image {
+    height: 40vh;
+  }
+  
+  .hero__gif {
+    margin-top: 5px;
+    height: 20vh;
+  }
+}
+
+/* Se agrega: Media querie para pantallas menores a 735px */
+@media (max-width: 735px) {
+  .header {
+    font-size: 25px;
+    padding: var(--padding-large);
+  }
+  
+  .product__image {
+    width: 100%;
+    height: 20vh;
+  }
+  
+  .product {
+    height: 40vh;
+  }
+  
+  .nav__button {
+    margin: 5px 11px;
+    background-color: rgba(83, 37, 37, 0);
+    padding: 4px;
+  }
+
+  .about {
+    height: 81vh;
+    margin: 0 auto;
+    margin-bottom: var(--margin-small);
+  }
+  
+  .about__image--center {
+    top: 12vh;
+    height: 52vh;
+    width: 38vw;
+  }
+  
+  .vision {
+    height: 75vh;
+  }
+
+  .vision__image--left {
+    width: 35%;
+    height: 50vh;
+  }
+
+  .vision__image--center {
+    width: 47%;
+    height: 59vh;
+    left: 20vw;
+  }
+
+  .vision__image--right {
+    width: 350px;
+    height: 50vh;
+  }
+}
+
+/* Se agrega: Media querie para pantallas menores a 675px */
+@media (max-width: 675px) {
+  .header {
+    font-size: 20px;
+    padding: 18px;
+  }
+  
+  .vision {
+    height: 68vh;
+  }
+  
+  .vision__image--left {
+    width: 40%;
+    height: 41vh;
+  }
+
+  .vision__image--center {
+    width: 50%;
+    height: 50vh;
+    left: 20vw;
+  }
+  
+  .about__image--center {
+    top: 15vh;
+    height: 45vh;
+  }
+
+  .vision__image--right {
+    width: 40%;
+    height: 41vh;
+  }
+  
+  .nav__button {
+    margin: 5px 7px;
+    background-color: rgba(83, 37, 37, 0);
+    padding: 4px;
+  }
+  
+  .nav__button--search {
+    width: 20vw;
+  }
+
+  .product {
+    width: 50vw;
+    height: 40vh;
+  }
+  
+  .product__image {
+    height: 25vh;
+  }
+  
+  .hero__gif {
+    height: 12vh;
+  }
+}
+
+/* Se agrega: Media querie para pantallas menores a 500px */
+@media (max-width: 500px) {
+  .header {
+    font-size: 20px;
+    padding: 11px;
+  }
+  
+  .nav__button {
+    margin: 3px 1px;
+  }
+  
+  .product {
+    width: 40vw;
+    height: 45vh;
+  }
+}

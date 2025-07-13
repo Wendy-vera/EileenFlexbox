@@ -1,0 +1,66 @@
+/* Se agrega: Variables CSS personalizadas para la barra de navegación */
+:root {
+    --border-radius: 10px;               /* Se agrega: Radio de bordes redondeados para elementos principales */
+    --margin-top-small: 10px;            /* Se agrega: Margen superior pequeño para separación básica */
+    --margin-top-button: 7px;            /* Se agrega: Margen superior específico para botones */
+    --img-size: 30px;                    /* Se agrega: Tamaño cuadrado para imágenes (30x30px) */
+    --button-height: 15px;               /* Se agrega: Altura fija para todos los botones */
+    --button-width: 60px;                /* Se agrega: Ancho fijo para todos los botones */
+    --border-radius-button: 5px;         /* Se agrega: Radio de borde más pequeño para botones */
+}
+
+/* Se agrega: Reset universal para establecer base común en todos los elementos */
+* {
+    box-sizing: content-box;             /* Se agrega: Calcula tamaño sin incluir padding ni border */
+    margin: 0;                           /* Se agrega: Elimina márgenes por defecto del navegador */
+    padding: 0;                          /* Se agrega: Elimina relleno por defecto del navegador */
+}
+
+/* Se agrega: Contenedor principal de la barra de navegación */
+.nav {
+    background-color: rgba(0, 0, 255, 0.315); /* Se agrega: Fondo azul translúcido para la navegación */
+    width: 90vw;                         /* Se agrega: Ancho del 90% del viewport (responsive) */
+    margin: 0 auto;                      /* Se agrega: Centra horizontalmente la barra */
+    height: 5vh;                         /* Se agrega: Altura del 5% del viewport (responsive) */
+    border-radius: var(--border-radius); /* Se agrega: Esquinas redondeadas usando variable */
+    margin-top: var(--margin-top-small); /* Se agrega: Separación desde la parte superior */
+    position: relative;                  /* Se agrega: Posicionamiento relativo para contener botones absolutos */
+}
+
+/* Se agrega: Estilo general para todas las imágenes */
+img {
+    width: var(--img-size);              /* Se agrega: Ancho fijo usando variable (30px) */
+    height: var(--img-size);             /* Se agrega: Altura fija usando variable (30px) */
+}
+
+/* Se agrega: Estilo base para todos los botones de navegación */
+.nav__button {
+    width: var(--button-width);          /* Se agrega: Ancho fijo usando variable (60px) */
+    height: var(--button-height);        /* Se agrega: Altura fija usando variable (15px) */
+    position: absolute;                  /* Se agrega: Posicionamiento absoluto dentro del nav */
+    margin-top: var(--margin-top-button); /* Se agrega: Separación superior específica para botones */
+    border: none;                        /* Se agrega: Elimina borde por defecto de los botones */
+    border-radius: var(--border-radius-button); /* Se agrega: Esquinas redondeadas más pequeñas */
+    background-color: blueviolet;        /* Se agrega: Color de fondo violeta azulado */
+    color: white;                        /* Se agrega: Texto blanco para contraste */
+}
+
+/* Se agrega: Posicionamiento específico del botón de inicio */
+.nav__button--inicio {
+    margin-left: 250px;                  /* Se agrega: Posición horizontal desde el borde izquierdo */
+}
+
+/* Se agrega: Posicionamiento específico del botón nosotros */
+.nav__button--nosotros {
+    margin-left: 330px;                  /* Se agrega: Posición horizontal con 80px de separación del anterior */
+}
+
+/* Se agrega: Posicionamiento específico del botón carrito */
+.nav__button--carrito {
+    margin-left: 410px;                  /* Se agrega: Posición horizontal con 80px de separación del anterior */
+}
+
+/* Se agrega: Posicionamiento específico del botón perfil */
+.nav__button--perfil {
+    margin-left: 490px;                  /* Se agrega: Posición horizontal con 80px de separación del anterior */
+}

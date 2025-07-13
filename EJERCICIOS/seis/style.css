@@ -1,0 +1,81 @@
+/* Se agrega: Variables CSS personalizadas para el formulario de inscripción */
+:root {
+    --border-radius: 5px;                /* Se agrega: Radio de bordes redondeados para inputs y botones */
+    --input-width: 220px;                /* Se agrega: Ancho fijo para todos los campos de entrada */
+    --margin-top-small: 10px;            /* Se agrega: Margen superior pequeño para elementos cercanos */
+    --margin-top-medium: 15px;           /* Se agrega: Margen superior mediano para separación estándar */
+    --margin-top-large: 30px;            /* Se agrega: Margen superior grande para separación importante */
+    --margin-top-xl: 50px;               /* Se agrega: Margen superior extra grande para el primer campo */
+    --button-width: 100px;               /* Se agrega: Ancho fijo para el botón de envío */
+    --button-margin-left: 36%;           /* Se agrega: Margen izquierdo porcentual para centrar botón */
+    --border-width: 5px;                 /* Se agrega: Grosor del borde del formulario */
+}
+
+/* Se agrega: Reset universal con fondo negro para toda la página */
+* {
+    box-sizing: content-box;             /* Se agrega: Calcula tamaño sin incluir padding ni border */
+    margin: 0;                           /* Se agrega: Elimina márgenes por defecto del navegador */
+    padding: 0;                          /* Se agrega: Elimina relleno por defecto del navegador */
+    background-color: black;             /* Se agrega: Fondo negro para toda la página (tema oscuro) */
+}
+
+/* Se agrega: Contenedor principal del formulario de inscripción */
+.inscription-form {
+    width: 350px;                        /* Se agrega: Ancho fijo del formulario */
+    height: 450px;                       /* Se agrega: Altura fija del formulario */
+    margin: 0 auto;                      /* Se agrega: Centra horizontalmente el formulario */
+    border: var(--border-width) solid white; /* Se agrega: Borde blanco grueso usando variable */
+    margin-top: var(--margin-top-medium); /* Se agrega: Separación desde la parte superior */
+}
+
+/* Se agrega: Estilo del título principal del formulario */
+h1 {
+    text-align: center;                  /* Se agrega: Centra el texto del título */
+    color: white;                        /* Se agrega: Color blanco para contraste con fondo negro */
+    margin-top: var(--margin-top-small); /* Se agrega: Pequeña separación desde el borde superior */
+}
+
+/* Se agrega: Estilo base para todos los campos de entrada */
+input {
+    display: block;                      /* Se agrega: Hace que los inputs ocupen toda la línea */
+    background-color: rgb(0, 255, 255);  /* Se agrega: Fondo cian brillante para los campos */
+    border-radius: var(--border-radius); /* Se agrega: Esquinas redondeadas usando variable */
+    width: var(--input-width);           /* Se agrega: Ancho fijo usando variable (220px) */
+}
+
+/* Se agrega: Efecto hover para los campos de entrada */
+input:hover {
+    background-color: rgb(215, 250, 248); /* Se agrega: Fondo cian más claro al pasar el mouse */
+}
+
+/* Se agrega: Estilo para contenedores de campos y botones */
+h1~div, button {
+    width: var(--input-width);           /* Se agrega: Ancho igual al de los inputs */
+    margin: 0 auto;                      /* Se agrega: Centra horizontalmente los elementos */
+    color: rgb(146, 158, 224);           /* Se agrega: Color azul claro para el texto */
+}
+
+/* Se agrega: Margen especial para el primer campo obligatorio */
+.inscription-form__field--required {
+    margin-top: var(--margin-top-xl);    /* Se agrega: Gran separación desde el título */
+}
+
+/* Se agrega: Espaciado para campos posteriores al primer campo obligatorio */
+.inscription-form__field--required ~ div {
+    margin-top: var(--margin-top-medium); /* Se agrega: Separación mediana entre campos siguientes */
+}
+
+/* Se agrega: Estilo específico para el botón de envío */
+button {
+    margin-top: var(--margin-top-large);  /* Se agrega: Gran separación desde el último campo */
+    background-color: rgb(20, 20, 107);   /* Se agrega: Fondo azul oscuro para el botón */
+    width: var(--button-width);           /* Se agrega: Ancho más pequeño que los inputs */
+    margin-left: var(--button-margin-left); /* Se agrega: Margen izquierdo porcentual para centrar */
+    border-radius: var(--border-radius);  /* Se agrega: Esquinas redondeadas consistentes */
+}
+
+/* Se agrega: Efecto hover para el botón */
+button:hover {
+    cursor: pointer;                     /* Se agrega: Cambia el cursor a puntero al pasar el mouse */
+    background-color: brown;             /* Se agrega: Fondo marrón para indicar interactividad */
+}

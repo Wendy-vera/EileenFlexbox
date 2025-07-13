@@ -1,0 +1,67 @@
+/* Se agregan variables CSS en :root para valores que se repiten */
+:root {
+    --spacing-small: 5px;
+    --spacing-medium: 15px;
+    --spacing-large: 20px;
+    --margin-auto: 0 auto;
+}
+
+/* Se agrega reset básico para todos los elementos */
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Se agrega contenedor principal de la página */
+.page {
+    background-color: rgb(234, 235, 235);
+    width: 60vw;
+    margin: var(--margin-auto);
+    border: 3px solid black;
+    margin-top: var(--spacing-medium);
+}
+
+/* Se agrega contenedor del contenido principal */
+.page__content {
+    margin-bottom: var(--spacing-large);
+}
+
+/* Se agrega estilo para el título principal */
+.page__title {
+    text-align: center;
+    margin-bottom: var(--spacing-small);
+    color: brown;
+}
+
+/* Se agrega línea divisoria */
+.page__divider {
+    height: 2px;
+    background-color: gray;
+    margin: 10px 0;
+    width: 90%;
+    margin: var(--margin-auto);
+    margin-bottom: var(--spacing-large);
+}
+
+/* Se agrega estilo general para párrafos */
+.page__paragraph {
+    margin: 0 var(--spacing-medium) var(--spacing-medium) var(--spacing-medium);
+}
+
+/* Se agrega estilo para la imagen */
+.page__image {
+    display: block;
+    margin: var(--margin-auto);
+    width: 200px;
+    height: 150px;
+    margin-bottom: var(--spacing-large);
+}
+
+
+/* Se agrega estilo para el texto de fuentes en el pie */
+.page__footer-source {
+    color: darkgray;
+    text-align: right;
+    margin: 0 var(--spacing-medium) var(--spacing-medium) var(--spacing-medium);
+}

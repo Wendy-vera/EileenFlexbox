@@ -1,0 +1,86 @@
+/* Se agrega: Variables CSS en root para reutilizar medidas comunes */
+:root {
+    --spacing-10: 10px;
+    --spacing-20: 20px;
+    --spacing-25: 25px;
+    --spacing-50: 50px;
+    --border-radius: 20px;
+    --container-width: 70vw;
+    --container-height: 100vh;
+    --cart-icon-width: 200px;
+    --card-width: 250px;
+    --card-height: 380px;
+    --card-image-width: 200px;
+}
+
+/* Se agrega: Reset básico para todos los elementos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+/* Se agrega: Estilos base del cuerpo */
+body{
+    background-color: darkgrey;
+}
+
+/* Se agrega: Estilo del título principal */
+h1{
+    text-align: center;
+    color: blue;
+}
+
+/* Se agrega: Contenedor principal del carrito de compras */
+.shopping-cart{
+    background-color: antiquewhite;
+    width: var(--container-width);
+    margin: 0 auto;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-top: var(--spacing-20);
+    height: var(--container-height);
+    margin-bottom: var(--spacing-20);
+}
+
+/* Se agrega: Icono del carrito de compras */
+.shopping-cart__icon{
+    width: var(--cart-icon-width);
+    margin: 0 auto;
+    margin-top: var(--spacing-50);
+    display: block;
+}
+
+/* Se agrega: Tarjetas de productos del carrito */
+.shopping-cart__card{
+    background-color: rgb(235, 181, 248);
+    width: var(--card-width);
+    height: var(--card-height);
+    margin-left: var(--spacing-50);
+    border-radius: var(--border-radius);
+    display: inline-block;
+    margin-top: var(--spacing-20);
+}
+
+/* Se agrega: Imagen de la primera tarjeta */
+.shopping-cart__card--first .shopping-cart__image{
+    width: var(--card-image-width);
+    margin-top: var(--spacing-20);
+    margin-bottom: var(--spacing-10);
+    border-radius: var(--border-radius);
+}
+
+/* Se agrega: Texto de todas las tarjetas */
+.shopping-cart__text{
+    margin: 0 var(--spacing-25);
+}
+
+/* Se agrega: Imágenes de la segunda y tercera tarjeta */
+.shopping-cart__card--second .shopping-cart__image,
+.shopping-cart__card--third .shopping-cart__image{
+    width: var(--card-image-width);
+    margin-top: var(--spacing-20);
+    margin-bottom: var(--spacing-10);
+    display: inline-block;
+    border-radius: var(--border-radius);
+}

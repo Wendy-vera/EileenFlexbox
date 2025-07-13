@@ -1,0 +1,94 @@
+/* Se agrega: Variables CSS en root para reutilizar medidas comunes */
+:root {
+    --spacing-2: 2px;
+    --spacing-5: 5px;
+    --spacing-8: 8px;
+    --spacing-10: 10px;
+    --spacing-11: 11px;
+    --spacing-12: 12px;
+    --spacing-15: 15px;
+    --spacing-20: 20px;
+    --border-radius-small: 5px;
+    --border-radius-medium: 10px;
+    --border-radius-large: 15px;
+    --container-width: 70vw;
+    --sidebar-width: 200px;
+    --sidebar-height: 80vh;
+    --content-height: 80vh;
+    --content-margin-left: 220px;
+    --image-width: 300px;
+    --image-height: 250px;
+}
+
+/* Se agrega: Reset básico para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+/* Se agrega: Contenedor principal de la página de anime */
+.anime-page {
+  width: var(--container-width);
+  margin: 0 auto;
+  margin-top: var(--spacing-20);
+  border: var(--spacing-2) solid black;
+  border-radius: var(--border-radius-large);
+}
+
+/* Se agrega: Barra lateral de navegación */
+.anime-page__sidebar {
+  width: var(--sidebar-width);
+  background-color: #222;
+  color: white;
+  padding: var(--spacing-20) var(--spacing-10);
+  float: left;
+  height: var(--sidebar-height);
+  border-end-start-radius: var(--spacing-11);
+  border-top-left-radius: var(--border-radius-medium);
+}
+
+/* Se agrega: Elementos individuales de la barra lateral */
+.sidebar-item {
+  margin-bottom: var(--spacing-15);
+  cursor: pointer;
+  padding: var(--spacing-8);
+  border-radius: var(--border-radius-small);
+  background-color: rgb(33, 14, 78);
+}
+
+/* Se agrega: Efecto hover para elementos de la barra lateral */
+.sidebar-item:hover {
+  background-color: #a2d0eb;
+  color: black;
+}
+
+/* Se agrega: Contenedor del contenido principal */
+.anime-page__content {
+  text-align: center;
+  margin-left: var(--content-margin-left);
+  padding: var(--spacing-20);
+  background-color: #a2d0eb;
+  height: var(--content-height);
+  border-bottom-right-radius: var(--spacing-12);
+  border-top-right-radius: var(--spacing-12);
+}
+
+/* Se agrega: Imagen principal del contenido */
+.anime-page__image {
+  width: var(--image-width);
+  height: var(--image-height);
+  margin-top: var(--spacing-20);
+  border-radius: var(--border-radius-medium);
+}
+
+/* Se agrega: Estilo especial para el elemento menu */
+#menu{    
+    background-color: aliceblue;
+    color: black;
+}
+
+/* Se agrega: Espaciado para párrafos */
+p{
+    margin-bottom: var(--spacing-20);
+}

@@ -1,0 +1,116 @@
+/* Se agrega: Variables CSS en root para reutilizar medidas comunes */
+:root {
+    --spacing-2: 2px;
+    --spacing-5: 5px;
+    --spacing-10: 10px;
+    --spacing-15: 15px;
+    --spacing-20: 20px;
+    --spacing-60: 60px;
+    --border-radius: 10px;
+    --border-width: 3px;
+    --container-width: 800px;
+    --container-height: 330px;
+    --content-width: 49%;
+    --content-height: 40%;
+    --playlist-width: 350px;
+    --image-size: 60px;
+    --font-size-small: 15px;
+    --transition-time: 1s;
+    --scale-factor: 1.1;
+}
+
+/* Se agrega: Reset básico para todos los elementos */
+*{
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Se agrega: Contenedor principal del reproductor de música */
+.music-player{
+    color: white;
+    width: var(--container-width);
+    height: var(--container-height);
+    background-color: rgb(54, 54, 54);
+    margin: 0 auto;
+    margin-top: var(--spacing-20);
+    border-radius: var(--border-radius);
+}
+
+/* Se agrega: Título principal */
+h1{
+    text-align: center;
+    padding-top: var(--spacing-10);
+}
+
+/* Se agrega: Contenedor del contenido principal (video y descripción) */
+.music-player__main-content{
+    width: var(--content-width);
+    height: var(--content-height);
+    display: inline-block;
+}
+
+/* Se agrega: Párrafos dentro del contenido principal */
+.music-player__main-content p{
+    margin-left: var(--spacing-10);
+}
+
+/* Se agrega: Estilo del video */
+video{
+    width:100%;
+    border-radius: var(--border-radius);
+}
+
+/* Se agrega: Contenedor de la lista de reproducción */
+.music-player__playlist {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Se agrega: Cada elemento de la lista de reproducción */
+.playlist-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-10);
+    border: var(--border-width) solid rgb(136, 133, 133);
+    width: var(--playlist-width);
+    border-radius: var(--border-radius);
+    margin-left: var(--spacing-5);
+    transition: var(--transition-time);
+}
+
+/* Se agrega: Imagen de cada elemento de la playlist */
+.playlist-item__image {
+    width: var(--image-size);
+    height: var(--image-size);
+    margin-right: var(--spacing-10);
+}
+
+/* Se agrega: Texto de cada elemento de la playlist */
+.playlist-item__text {
+    margin: 0;
+}
+
+/* Se agrega: Margen izquierdo del contenido principal */
+.music-player__main-content{
+    margin-left: var(--spacing-15);
+}
+
+/* Se agrega: Estilo del subtítulo */
+h2{
+    font-size: var(--font-size-small);
+    margin-left: var(--spacing-2);
+}
+
+/* Se agrega: Margen superior para divs hermanos del h1 */
+h1 ~ div{
+    margin-top: var(--spacing-10);
+}
+
+/* Se agrega: Efecto hover para elementos de la playlist */
+.playlist-item:hover{
+    background-color: black;
+    cursor: pointer;
+    transition: var(--transition-time);
+    transform: scale(var(--scale-factor));
+}

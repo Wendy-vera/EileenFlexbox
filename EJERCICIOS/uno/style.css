@@ -1,0 +1,83 @@
+/* Se agrega: Variables CSS personalizadas para mantener consistencia en el diseño */
+:root {
+    --border-radius: 10px;           /* Se agrega: Radio de borde redondeado para elementos */
+    --font-size-small: 15px;         /* Se agrega: Tamaño de fuente pequeño para texto secundario */
+    --margin-left-small: 15px;       /* Se agrega: Margen izquierdo pequeño para espaciado */
+    --margin-left-medium: 20px;      /* Se agrega: Margen izquierdo mediano para más separación */
+    --margin-top-small: 10px;        /* Se agrega: Margen superior pequeño para elementos cercanos */
+    --margin-top-medium: 8px;        /* Se agrega: Margen superior mediano, ligeramente menor */
+    --margin-top-large: 40px;        /* Se agrega: Margen superior grande para separación importante */
+    --margin-left-xs: 5px;           /* Se agrega: Margen izquierdo extra pequeño para ajustes finos */
+    --margin-top-xl: 50px;           /* Se agrega: Margen superior extra grande para espaciado principal */
+    --border-width: 2px;             /* Se agrega: Grosor del borde para elementos con contorno */
+}
+
+/* Se agrega: Reset universal para todos los elementos, estableciendo base común */
+* {
+    box-sizing: content-box;         /* Se agrega: Calcula el tamaño sin incluir padding y border */
+    margin: 0;                       /* Se agrega: Elimina márgenes por defecto del navegador */
+    padding: 0;                      /* Se agrega: Elimina relleno por defecto del navegador */
+    font-family: "Pacifico", cursive; /* Se agrega: Fuente cursiva elegante para toda la página */
+    font-weight: 400;                /* Se agrega: Peso normal de la fuente */
+    font-style: normal;              /* Se agrega: Estilo normal (no itálica) */
+}
+
+/* Se agrega: Contenedor principal de la tarjeta con diseño centrado */
+.card {
+    width: 500px;                           /* Se agrega: Ancho fijo de la tarjeta */
+    height: 250px;                          /* Se agrega: Alto fijo de la tarjeta */
+    background-color: rgba(250, 92, 171, 0.575); /* Se agrega: Color de fondo rosa translúcido */
+    margin: 0 auto;                         /* Se agrega: Centra la tarjeta horizontalmente */
+    margin-top: var(--margin-top-xl);       /* Se agrega: Separación desde la parte superior */
+    border-radius: var(--border-radius);    /* Se agrega: Esquinas redondeadas usando variable */
+    border: solid black var(--border-width); /* Se agrega: Borde negro sólido con grosor variable */
+}
+
+/* Se agrega: Sección de información que ocupa la mitad izquierda de la tarjeta */
+.card__info {
+    width: 50%;                      /* Se agrega: Ocupa exactamente la mitad del ancho */
+    height: 100%;                    /* Se agrega: Ocupa toda la altura disponible */
+    display: inline-block;           /* Se agrega: Permite que otros elementos se coloquen al lado */
+}
+
+/* Se agrega: Estilo para el título principal de la tarjeta */
+h1 {
+    font-size: 2rem;                 /* Se agrega: Tamaño grande para el título (32px aprox) */
+    text-align: center;              /* Se agrega: Centra el texto horizontalmente */
+}
+
+/* Se agrega: Estilo para párrafos con espaciado consistente */
+p {
+    font-size: var(--font-size-small);      /* Se agrega: Tamaño pequeño usando variable */
+    margin-top: var(--margin-top-small);    /* Se agrega: Separación superior pequeña */
+    margin-left: var(--margin-left-medium); /* Se agrega: Separación izquierda mediana */
+}
+
+/* Se agrega: Estilo para el código QR con posicionamiento específico */
+.card__qr {
+    width: 120px;                           /* Se agrega: Ancho fijo para el código QR */
+    margin-left: var(--margin-left-xs);     /* Se agrega: Pequeña separación desde el borde izquierdo */
+    margin-top: var(--margin-top-medium);   /* Se agrega: Separación superior mediana */
+}
+
+/* Se agrega: Información de contacto posicionada de forma absoluta */
+.card__contact {
+    position: absolute;                      /* Se agrega: Posicionamiento absoluto para control total */
+    display: inline-block;                   /* Se agrega: Comportamiento de bloque en línea */
+    font-size: var(--font-size-small);      /* Se agrega: Tamaño de fuente pequeño */
+    margin-left: var(--margin-left-small);  /* Se agrega: Separación izquierda pequeña */
+    margin-top: var(--margin-top-large);    /* Se agrega: Separación superior grande */
+}
+
+/* Se agrega: Contenedor del logo en la mitad derecha de la tarjeta */
+.card__logo {
+    display: inline-block;           /* Se agrega: Permite colocación al lado de otros elementos */
+    width: 45%;                      /* Se agrega: Ocupa casi la mitad restante del ancho */
+    height: 200px;                   /* Se agrega: Altura fija para el contenedor del logo */
+}
+
+/* Se agrega: Estilo para la imagen del logo con ajuste de tamaño */
+.card__logo img {
+    width: 100%;                     /* Se agrega: La imagen ocupa todo el ancho del contenedor */
+    height: 120%;                    /* Se agrega: La imagen se extiende más allá del contenedor (puede desbordarse) */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="movies">
+    <h1 class="movies__title">Películas</h1>
+    <div class="movies__categories">
+      <h2 class="movies__categories-title">Categorías</h2>
+
+      <!-- Inputs radio (deben ir ANTES que los labels y divs de contenido) -->
+      <input type="radio" name="categoria" id="terror" class="movies__input" checked>
+      <input type="radio" name="categoria" id="comedia" class="movies__input">
+      <input type="radio" name="categoria" id="accion" class="movies__input">
+      <input type="radio" name="categoria" id="romance" class="movies__input">
+
+      <!-- Botones: deben ir después de los input y antes de los divs -->
+      <div class="movies__buttons">
+        <label for="terror" class="movies__button">Terror</label>
+        <label for="comedia" class="movies__button">Comedia</label>
+        <label for="accion" class="movies__button">Acción</label>
+        <label for="romance" class="movies__button">Romance</label>
+      </div>
+
+      <!-- Contenido: al mismo nivel que los inputs -->
+      <div id="contenido-terror" class="movies__content">
+        <img src="recursos/insidious.avif" alt="" class="movies__image">
+        <img src="recursos/terror2.avif" alt="" class="movies__image">
+        <img src="recursos/terror3.avif" alt="" class="movies__image">
+        <img src="recursos/terror4.avif" alt="" class="movies__image">
+      </div>
+
+      <div id="contenido-comedia" class="movies__content">
+        <img src="recursos/comedia1.jpg" alt="" class="movies__image">
+        <img src="recursos/comedia2.jpg" alt="" class="movies__image">
+        <img src="recursos/comedia3.jpg" alt="" class="movies__image">
+        <img src="recursos/comedia4.jpeg" alt="" class="movies__image">
+      </div>
+
+      <div id="contenido-accion" class="movies__content">
+        <img src="recursos/accion1.webp" alt="" class="movies__image">
+        <img src="recursos/accion2.jpg" alt="" class="movies__image">
+        <img src="recursos/accion3.webp" alt="" class="movies__image">
+        <img src="recursos/accion4.jpg" alt="" class="movies__image">
+      </div>
+
+      <div id="contenido-romance" class="movies__content">
+        <img src="recursos/romance1.jpg" alt="" class="movies__image">
+        <img src="recursos/romance2.jpg" alt="" class="movies__image">
+        <img src="recursos/romance3.jpg" alt="" class="movies__image">
+        <img src="recursos/romance.jpg" alt="" class="movies__image">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

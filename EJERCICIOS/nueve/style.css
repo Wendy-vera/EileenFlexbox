@@ -1,0 +1,52 @@
+/* Se agregan variables CSS en :root para valores que se repiten */
+:root {
+  --padding-medium: 10px;
+  --padding-large: 20px;
+  --border-width: 1px;
+  --image-width: 150px;
+  --image-height: 200px;
+  --margin-auto: 0 auto;
+}
+
+/* Se agrega contenedor principal de las tabs */
+.tabs {
+  width: 80vw;
+  margin: var(--margin-auto);
+}
+
+/* Se agrega estilo para ocultar los inputs radio */
+.tabs__input {
+  display: none;
+}
+
+/* Se agrega estilo para las etiquetas de las tabs */
+.tabs__label {
+  display: block;
+  padding: var(--padding-medium);
+  background-color: #eee;
+  cursor: pointer;
+  border: var(--border-width) solid #0011ff;
+}
+
+/* Se agrega estilo para el contenido de las tabs */
+.tabs__content {
+  display: none;
+  padding: var(--padding-large);
+}
+
+/* Se agrega estilo para la etiqueta activa */
+.tabs__input:checked + .tabs__label {
+  background-color: #ca04e4;
+  font-weight: bold;
+}
+
+/* Se agrega estilo para mostrar el contenido de la tab activa */
+.tabs__input:checked + .tabs__label + .tabs__content {
+  display: block;
+}
+
+/* Se agrega estilo para las imágenes dentro del contenido */
+.tabs__image {
+  width: var(--image-width);
+  height: var(--image-height);
+}

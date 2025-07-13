@@ -1,0 +1,72 @@
+/* Se agrega: Variables CSS en :root para reutilizar medidas comunes */
+:root {
+    --border-radius: 20px;
+    --container-width: 70vw;
+    --content-width: 60vw;
+    --spacing-medium: 20px;
+    --spacing-small: 10px;
+    --spacing-large: 30px;
+}
+
+/* Se agrega: Reset básico para eliminar márgenes y padding por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+/* Se agrega: Contenedor principal del blog usando metodología BEM */
+.blog {
+    background-color: aliceblue;
+    width: var(--container-width);
+    margin: 0 auto;
+    margin-top: var(--spacing-medium);
+    border-radius: var(--border-radius);
+    height: 60vh;
+}
+
+/* Se agrega: Espacio superior del blog con información del autor */
+.blog__header {
+    width: var(--container-width);
+    background-color: aqua;
+    height: 50px;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+/* Se agrega: Texto del autor en el header */
+.blog__header p {
+    padding: var(--spacing-small);
+}
+
+/* Se agrega: Título principal del blog */
+h1 {
+    text-align: center;
+}
+
+/* Se agrega: Contenedor del contenido principal del blog */
+.blog__content {
+    width: var(--content-width);
+    margin: 0 auto;
+}
+
+/* Se agrega: Sección de texto del artículo */
+.blog__article {
+    display: inline-block;
+    width: 550px;
+    margin-right: var(--spacing-medium);
+}
+
+/* Se agrega: Título del artículo */
+h2 {
+    margin-bottom: var(--spacing-large);
+    text-align: center;
+}
+
+/* Se agrega: Imagen del artículo con bordes redondeados */
+img {
+    display: inline-block;
+    width: 240px;
+    height: 180px;
+    border-radius: var(--border-radius);
+}

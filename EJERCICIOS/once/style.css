@@ -1,0 +1,120 @@
+/* Se agrega: Variables CSS en root para reutilizar medidas comunes */
+:root {
+    --spacing-10: 10px;
+    --spacing-20: 20px;
+    --spacing-30: 30px;
+    --spacing-50: 50px;
+    --spacing-80: 80px;
+    --spacing-100: 100px;
+    --spacing-150: 150px;
+    --container-width: 30vw;
+    --notes-section-width: 360px;
+    --notes-section-height: 180px;
+    --line-width: 350px;
+    --line-height: 2px;
+    --border-radius: 50px;
+    --font-size-small: 12px;
+}
+
+/* Se agrega: Reset básico para todos los elementos */
+*{
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Se agrega: Estilos base del cuerpo */
+body{
+    background-color: blue;
+}
+
+/* Se agrega: Estilo del título principal */
+h1{
+    text-align: center;
+    margin: var(--spacing-20) 0 var(--spacing-20) 0;
+}
+
+/* Se agrega: Contenedor principal de la aplicación */
+.grades-app{
+    background-color: violet;
+    width: var(--container-width);
+    height: 70vh;
+    
+    margin: 0 auto;
+    margin-top: var(--spacing-20);
+    margin-bottom: var(--spacing-50);
+}
+
+/* Se agrega: Sección del encabezado con información del estudiante */
+.grades-app__header {
+  text-align: center;
+  margin-bottom: var(--spacing-10);
+}
+
+/* Se agrega: Imagen de perfil del estudiante */
+.grades-app__avatar {
+  display: inline-block;
+  vertical-align: middle;
+  width: var(--spacing-80);
+  height: var(--spacing-80);
+  border-radius: var(--border-radius);
+  margin-top: var(--spacing-20);
+}
+
+/* Se agrega: Línea divisoria decorativa */
+.grades-app__divider{
+    width: var(--line-width);
+    height: var(--line-height);
+    background-color: aqua;
+    margin: 0 auto;
+    margin-bottom: var(--spacing-10);
+}
+
+/* Se agrega: Sección principal de notas */
+.grades-app__notes {
+  background-color: aliceblue;
+  width: var(--notes-section-width);
+  padding: var(--spacing-10);
+  margin: 0 auto;
+  height: var(--notes-section-height);
+}
+
+/* Se agrega: Cada fila de materia con su input */
+.subject-row {
+  margin-bottom: var(--spacing-10);
+}
+
+/* Se agrega: Nombre de la materia */
+.subject-row__label {
+  display: inline-block;
+  width: var(--spacing-100);
+  text-align: left;
+  margin: 0;
+}
+
+/* Se agrega: Campo de entrada para la calificación */
+.subject-row__input {
+  display: inline-block;
+  width: var(--spacing-150);
+  margin-left: var(--spacing-100);
+}
+
+/* Se agrega: Contenedor del botón */
+.grades-app__button-container{
+    width: var(--spacing-100);
+    
+    margin: 0 auto;
+    margin-top: var(--spacing-30);
+}
+
+/* Se agrega: Botón para cargar calificaciones */
+.grades-app__submit-button{
+    font-size: var(--font-size-small);
+    background-color: purple;
+    color: wheat;
+}
+
+/* Se agrega: Efecto hover del botón */
+.grades-app__submit-button:hover{
+    cursor: pointer;
+}

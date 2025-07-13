@@ -1,0 +1,49 @@
+/* Se agrega: Variables CSS personalizadas para la tabla de datos */
+:root {
+    --border-width: 2px;                 /* Se agrega: Grosor del borde para todas las celdas */
+    --margin-top: 20px;                  /* Se agrega: Margen superior para la tabla */
+    --table-width: 50vw;                 /* Se agrega: Ancho responsive de la tabla (50% del viewport) */
+}
+
+/* Se agrega: Reset universal para establecer base común en todos los elementos */
+* {
+    box-sizing: content-box;             /* Se agrega: Calcula tamaño sin incluir padding ni border */
+    margin: 0;                           /* Se agrega: Elimina márgenes por defecto del navegador */
+    padding: 0;                          /* Se agrega: Elimina relleno por defecto del navegador */
+}
+
+/* Se agrega: Estilo principal de la tabla con diseño centrado */
+table {
+    background-color: rgb(255, 151, 124); /* Se agrega: Fondo naranja claro para la tabla */
+    width: var(--table-width);           /* Se agrega: Ancho responsive usando variable (50% viewport) */
+    margin: 0 auto;                      /* Se agrega: Centra horizontalmente la tabla */
+    margin-top: var(--margin-top);       /* Se agrega: Separación desde la parte superior */
+    border-collapse: collapse;           /* Se agrega: Colapsa bordes para evitar espacios dobles */
+}
+
+/* Se agrega: Estilo para el encabezado principal de la tabla */
+.data-table__header {
+    border: var(--border-width) solid black; /* Se agrega: Borde negro sólido usando variable */
+    background-color: rgb(255, 71, 71);  /* Se agrega: Fondo rojo intenso para destacar encabezado */
+    margin: 0 auto;                      /* Se agrega: Centra el encabezado (aunque no es necesario en th) */
+}
+
+/* Se agrega: Alineación del texto en las celdas del encabezado principal */
+.data-table__header > th {
+    text-align: center;                  /* Se agrega: Centra el texto en las celdas del encabezado */
+}
+
+/* Se agrega: Borde para múltiples tipos de celdas en la tabla */
+.data-table__subheader th,
+.data-table__row--shirts th,
+.data-table__row--pants th,
+.data-table__row--necklaces th,
+.data-table__row--bracelets th,
+.data-table__row--keychains th {
+    border: var(--border-width) solid black; /* Se agrega: Borde negro para todas las celdas de contenido */
+}
+
+/* Se agrega: Estilo específico para el subencabezado de la tabla */
+.data-table__subheader {
+    background-color: rgb(245, 94, 94);  /* Se agrega: Fondo rojo más claro que el encabezado principal */
+}
